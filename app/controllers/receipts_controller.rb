@@ -13,6 +13,12 @@ class ReceiptsController < ApplicationController
     end
   end
 
+  def destroy
+    @receipt = Receipt.find(params[:id])
+    @receipt.destroy
+    head :no_content
+  end
+
   private
 
   def receipt_params
