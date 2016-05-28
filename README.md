@@ -1,6 +1,6 @@
-<<<<<<< HEAD
 # counting
 ### Helping keep track of finances using react.js
+### with help from an online tutorial
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
