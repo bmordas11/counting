@@ -18,6 +18,10 @@
     ), 0
   balance: ->
     @debits() + @credits()
+  updateReceipt: (receipt, data) ->
+    index = @state.receipts.indexOf receipt
+    receipts = React.addons.update(@state.receipts, { $splice: [[index, 1, data]] })
+    @replaceState receipts: receipts
   deleteReceipt: (receipt) ->
     index = @state.receipts.indexOf receipt
     receipts = React.addons.update(@state.receipts, { $splice: [[index, 1]] })
@@ -45,4 +49,4 @@
             React.DOM.th null, 'Actions'
         React.DOM.tbody null,
           for receipt in @state.receipts
-            React.createElement Receipt, key: receipt.id, receipt: receipt, handleDeleteReceipt: @deleteReceipt
+            React.createElement Receipt, key: receipt.id, receipt: receipt, handleDeleteReceipt: @deleteReceipt, handleEditReceipt: @updateReceipt

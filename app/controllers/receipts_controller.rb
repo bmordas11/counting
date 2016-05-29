@@ -13,6 +13,15 @@ class ReceiptsController < ApplicationController
     end
   end
 
+  def update
+    @receipt = Receipt.find(params[:id])
+    if @receipt.update(receipt_params)
+      render json: @receipt
+    else
+      render json: @receipt.errors, status: :unprocessable_entity
+    end
+  end
+
   def destroy
     @receipt = Receipt.find(params[:id])
     @receipt.destroy
