@@ -4,8 +4,7 @@
   getDefaultProps: ->
     receipts: []
   addReceipt: (receipt) ->
-    receipts = @state.receipts.slice()
-    receipts.push receipt
+    receipts = React.addons.update(@state.receipts, { $push: [receipt] })
     @setState receipts: receipts
   credits: ->
     credits = @state.receipts.filter (val) -> val.amount >= 0
@@ -20,9 +19,8 @@
   balance: ->
     @debits() + @credits()
   deleteReceipt: (receipt) ->
-    receipts = @state.receipts.slice()
-    index = receipts.indexOf receipt
-    receipts.splice index, 1
+    index = @state.receipts.indexOf receipt
+    receipts = React.addons.update(@state.receipts, { $splice: [[index, 1]] })
     @replaceState receipts: receipts
   render: ->
     React.DOM.div
