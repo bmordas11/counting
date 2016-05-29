@@ -41,7 +41,7 @@
         React.DOM.input
           type: 'float'
           className: 'form-control'
-          placeholder: 'Amount'
+          placeholder: 'Total'
           name: 'amount'
           value: @state.amount
           onChange: @handleChange
