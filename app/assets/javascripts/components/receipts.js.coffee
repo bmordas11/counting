@@ -4,8 +4,7 @@
   getDefaultProps: ->
     receipts: []
   addReceipt: (receipt) ->
-    receipts = @state.receipts.slice()
-    receipts.push receipt
+    receipts = React.addons.update(@state.receipts, { $push: [receipt] })
     @setState receipts: receipts
   credits: ->
     credits = @state.receipts.filter (val) -> val.amount >= 0
@@ -19,12 +18,20 @@
     ), 0
   balance: ->
     @debits() + @credits()
+  updateReceipt: (receipt, data) ->
+    index = @state.receipts.indexOf receipt
+    receipts = React.addons.update(@state.receipts, { $splice: [[index, 1, data]] })
+    @replaceState receipts: receipts
+  deleteReceipt: (receipt) ->
+    index = @state.receipts.indexOf receipt
+    receipts = React.addons.update(@state.receipts, { $splice: [[index, 1]] })
+    @replaceState receipts: receipts
   render: ->
     React.DOM.div
       className: 'receipts'
       React.DOM.h2
         className: 'title'
-        'Receipts'
+        'Your Receipts'
       React.DOM.div
         className: 'row'
         React.createElement AmountBox, type: 'success', amount: @credits(), text: 'Credit'
@@ -39,6 +46,7 @@
             React.DOM.th null, 'Date'
             React.DOM.th null, 'Title'
             React.DOM.th null, 'Amount'
+            React.DOM.th null, 'Actions'
         React.DOM.tbody null,
           for receipt in @state.receipts
-            React.createElement Receipt, key: receipt.id, receipt: receipt
+            React.createElement Receipt, key: receipt.id, receipt: receipt, handleDeleteReceipt: @deleteReceipt, handleEditReceipt: @updateReceipt
