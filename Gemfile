@@ -15,6 +15,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'pry-rails'
 gem 'react-rails'
+gem 'coveralls', require: false
 
 # gem 'bcrypt', '~> 3.1.7'
 

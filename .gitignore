@@ -2,6 +2,7 @@
 !/log/.keep
 /tmp
 
+.coveralls.yml
 *.rbc
 capybara-*.html
 .rspec
@@ -29,5 +30,4 @@ config/secrets.yml
 /vendor/assets/bower_components
 *.bowerrc
 bower.json
-
 .powenv

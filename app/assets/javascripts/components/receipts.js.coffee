@@ -49,4 +49,5 @@
             React.DOM.th null, 'Actions'
         React.DOM.tbody null,
           for receipt in @state.receipts
-            React.createElement Receipt, key: receipt.id, receipt: receipt, handleDeleteReceipt: @deleteReceipt, handleEditReceipt: @updateReceipt
+            React.createElement Receipt, key: receipt.
+            id, receipt: receipt, handleDeleteReceipt: @deleteReceipt, handleEditReceipt: @updateReceipt
