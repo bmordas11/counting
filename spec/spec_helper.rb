@@ -1,5 +1,5 @@
 require "coveralls"
-Coveralls.wear!('rails')
+Coveralls.wear!("rails")
 require "capybara/rspec"
 require "factory_girl_rails"
 
