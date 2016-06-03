@@ -1,6 +1,6 @@
-require "capybara/rspec"
 require "coveralls"
-Coveralls.wear!
+Coveralls.wear!('rails')
+require "capybara/rspec"
 require "factory_girl_rails"
 
 RSpec.configure do |config|
