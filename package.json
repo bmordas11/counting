@@ -1,0 +1,40 @@
+{
+  "name": "counting",
+  "version": "1.0.0",
+  "description": "Application to help track receipts",
+  "main": "index.js",
+  "dependencies": {
+    "babel-core": "^6.9.1",
+    "babel-jest": "^12.1.0",
+    "babel-preset-jest": "^12.1.0",
+    "react": "~0.14.0",
+    "react-dom": "~0.14.0"
+  },
+  "devDependencies": {
+    "babel-jest": "^9.0.0",
+    "babel-preset-es2015": "*",
+    "babel-preset-react": "*",
+    "jest-cli": "*",
+    "react-addons-test-utils": "~0.14.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react/",
+      "<rootDir>/node_modules/react-dom/",
+      "<rootDir>/node_modules/react-addons-test-utils/"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmordas11/counting.git"
+  },
+  "author": "Brett",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bmordas11/counting/issues"
+  },
+  "homepage": "https://github.com/bmordas11/counting#readme"
+}

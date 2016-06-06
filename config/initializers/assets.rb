@@ -1,11 +1,43 @@
 # Be sure to restart your server when you modify this file.
 
-# Version of your assets, change this if you want to expire all your assets.
 Rails.application.config.assets.version = '1.0'
 
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
 
-# Precompile additional assets.
-# application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
-# Rails.application.config.assets.precompile += %w( search.js )
+Rails.application.config.assets.precompile += %w( support/phantomjs-shims.self.js )
+Rails.application.config.assets.precompile += %w( jquery.self.js )
+Rails.application.config.assets.precompile += %w( jquery_ujs.self.js )
+Rails.application.config.assets.precompile += %w( twitter/bootstrap/transition.self.js )
+Rails.application.config.assets.precompile += %w( twitter/bootstrap/alert.self.js )
+Rails.application.config.assets.precompile += %w( twitter/bootstrap/modal.self.js )
+Rails.application.config.assets.precompile += %w( twitter/bootstrap/dropdown.self.js )
+Rails.application.config.assets.precompile += %w( twitter/bootstrap/scrollspy.self.js )
+Rails.application.config.assets.precompile += %w( twitter/bootstrap/tab.self.js )
+Rails.application.config.assets.precompile += %w( twitter/bootstrap/tooltip.self.js )
+Rails.application.config.assets.precompile += %w( twitter/bootstrap/popover.self.js )
+Rails.application.config.assets.precompile += %w( twitter/bootstrap/button.self.js )
+Rails.application.config.assets.precompile += %w( twitter/bootstrap/collapse.self.js )
+Rails.application.config.assets.precompile += %w( twitter/bootstrap/carousel.self.js )
+Rails.application.config.assets.precompile += %w( twitter/bootstrap/affix.self.js )
+Rails.application.config.assets.precompile += %w( twitter/bootstrap.self.js )
+Rails.application.config.assets.precompile += %w( turbolinks.self.js )
+Rails.application.config.assets.precompile += %w( react.self.js )
+Rails.application.config.assets.precompile += %w( react_ujs.self.js )
+Rails.application.config.assets.precompile += %w( react_ujs_mount.self.js )
+Rails.application.config.assets.precompile += %w( react_ujs_turbolinks.self.js )
+Rails.application.config.assets.precompile += %w( react_ujs_turbolinks_classic.self.js )
+Rails.application.config.assets.precompile += %w( react_ujs_turbolinks_classic_deprecated.self.js )
+Rails.application.config.assets.precompile += %w( react_ujs_pjax.self.js )
+Rails.application.config.assets.precompile += %w( react_ujs_native.self.js )
+Rails.application.config.assets.precompile += %w( react_ujs_event_setup.self.js )
+Rails.application.config.assets.precompile += %w( components/amount_box.self.js )
+Rails.application.config.assets.precompile += %w( components/receipt.self.js )
+Rails.application.config.assets.precompile += %w( components/receipt_form.self.js )
+Rails.application.config.assets.precompile += %w( components/receipts.self.js )
+Rails.application.config.assets.precompile += %w( components.self.js )
+Rails.application.config.assets.precompile += %w( bootstrap.self.js )
+Rails.application.config.assets.precompile += %w( utils.self.js )
+Rails.application.config.assets.precompile += %w( application.self.js )
+Rails.application.config.assets.precompile += %w( spec_helper.self.js )
+Rails.application.config.assets.precompile += %w( receipt_spec.self.js )
